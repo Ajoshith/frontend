@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,64 +23,10 @@
             margin-bottom: 20px;
         }
 
-        nav {
-            background-color: #283593;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-
-        section {
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #ddd;
-        }
-
-
         h2 {
             color: #1a237e;
             border-bottom: 2px solid #1a237e;
             padding-bottom: 10px;
-        }
-
-        article {
-            margin: 15px 0;
-            padding: 15px;
-            background-color: #f8f9fa;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-
-        a {
-            color: #3949ab;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-        }
-
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #ddd;
-            margin: 20px 0;
         }
     </style>
 </head>
@@ -87,21 +35,46 @@
         <h1>Joshith Akula</h1>
         <h3>Software Engineer</h3>
     </header>
-    <nav>
-        <a href="#intro">About me ||</a>
-        <a href="#skills">skills ||</a>
-        <a href="#projects">projects ||</a>
-        <a href="#achievements">Achievements ||</a>
-        <a href="#education">Education ||</a>
-        <a href="#contact">Contact Information</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Joshith Akula</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feedback">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <hr>
-    <section id="intro">
+
+    <section id="intro" class="container mt-4">
         <h2>About Me</h2>
         <p>A passionate software developer with experience in leveraging AI frameworks and web technologies.</p>
     </section>
-    <hr>
-    <section id="skills">
+
+    <section id="skills" class="container mt-4">
         <h2>Technical Skills</h2>
         <ul>
             <li>Languages: JavaScript, Python, Java</li>
@@ -112,50 +85,33 @@
             <li>Database: MongoDB, MySQL</li>
         </ul>
     </section>
-    <hr>
-    <section id="projects">
+
+    <section id="projects" class="container mt-4">
         <h2>Projects</h2>
-        <article>
-            <h3>heart health</h3>
-            <p>AI-powered heart health monitoring and safety system</p>
-            <p>Github: <a href="https://github.com/Ajoshith/heart-health" target="_blank">Github link</a></p>
-        </article>
-        <article>
-            <h3>GymRock</h3>
-            <p>AI-powered virtual fitness trainer</p>
-            <p>Github: <a href="https://github.com/Hanuth2574/PS31" target="_blank">Github link</a></p>
-        </article>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Heart Health</h5>
+                        <p class="card-text">AI-powered heart health monitoring and safety system.</p>
+                        <a href="https://github.com/Ajoshith/heart-health" class="btn btn-primary" target="_blank">GitHub Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">GymRock</h5>
+                        <p class="card-text">AI-powered virtual fitness trainer.</p>
+                        <a href="https://github.com/Hanuth2574/PS31" class="btn btn-primary" target="_blank">GitHub Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <hr>
-    <section id="achievements">
+
+    <section id="achievements" class="container mt-4">
         <h2>Achievements</h2>
         <ul>
             <li>average monthly open source model downloads: 150+ link: <a href="https://huggingface.co/AJosh" target="_blank">Hugging face repo</a></li>
-            <li>Generative Ai with LLM(AWS) coursework: <a href="https://www.coursera.org/account/accomplishments/verify/XYPM63E8ZDAY" target="_blank">verify certificate</a></li>
-        </ul>
-    </section>
-    <hr>
-    <section id="education">
-        <h2>Education</h2>
-        <article>
-            <h3>Btech</h3>
-            <p>Kmit</p>
-            <p>2022 - 2026</p>
-        </article>
-    </section>
-    <hr>
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <ul>
-            <li>Email: joshfinco100@gmail.com</li>
-            <li>Phone: 7780229330</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank">LinkedIn</a></li>
-            <li>GitHub: <a href="https://github.com/Ajoshith" target="_blank">GitHub</a></li>
-        </ul>
-    </section>
-    <hr>
-    <footer>
-        <p>&copy; 2024 Joshith Akula. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+            <li>Generative Ai with LLM(AWS) coursework: <a href="https://www.cour
